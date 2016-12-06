@@ -1,0 +1,626 @@
+/*******************************************************************************
+* Autores: Filipe C. E., Vinicius L. C. D., Nicolas Y. G.
+* Data de criação: 24/08/16
+* Data de modificação: 31/08/16
+********************************************************************************/
+
+html, body{
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+/* HEADER ***********************************************************************************************************************************/
+
+header{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 1px 5px 0px #ddd;
+  background: linear-gradient(to right, #ffffaa 0%, #ffffaa 31%, #f9f95c 37%, #f9f95c 100%);
+  position: relative;
+  z-index: 5;
+}
+
+header #logo{
+  width: 35%;
+  height: 100%;
+}
+
+header #logo img{
+  height: 100%;
+}
+
+header nav{
+  height: 100%;
+  width: 40%;
+}
+
+header nav ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+header nav ul span, header nav ul a{
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+header nav ul a{
+  color: #000;
+  text-decoration: none;
+}
+
+header nav ul span:hover, header nav ul a:hover{
+  border-bottom: 5px #494949 solid;
+  background-color: #f4f454;
+  cursor: pointer;
+}
+
+header nav ul span li, header nav ul a li{
+  height: 100%;
+  width: 100%;
+  font-size: 19px;
+  line-height: 100px;
+  text-align: center;
+}
+
+/* estiliza o elemento baseado no número de elementos filhos. é feio, mas até o css adicionar suporte de variáveis, vai ter que ser assim. */
+
+header nav span li:hover .dropdown2{
+  height: 100px;
+}
+
+header nav span li:hover .dropdown3{
+  height: 150px;
+}
+
+header nav span li:hover .dropdown5{
+  height: 250px;
+}
+
+header nav span li:hover .dropdown8{
+  height: 400px;
+}
+
+header .dropdown{
+  box-shadow: 0 2px 3px #ddd;
+  height: 0px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  transition: 1s ease;
+}
+
+header .dropdown a{
+  background-color: #f9f95c;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+}
+
+header .dropdown a:hover{
+  background-color: #f4f454;
+  border: 0;
+}
+
+header .dropdown a li{
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+}
+
+header #access{
+  height: 100%;
+  width: 25%;
+  display: flex;
+}
+
+header #access ul{
+  height: 70px;
+  width: calc(75% - 20px);
+  padding: 15px 0 15px 20px;
+}
+
+header #access ul li{
+  height: 50%;
+  width: 100%;
+  line-height: 35px;
+}
+
+header #access ul li input{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px #bbb solid;
+  border-radius: 17px 0 17px 0;
+  padding: 2px;
+  padding-left: 10px;
+  outline: none;
+}
+
+header #access div{
+  height: 100%;
+  width: 25%;
+  text-align: center;
+  line-height: 110px;
+}
+
+.iconbutton{
+	background: none;
+	border: 0;
+	padding: 10px;
+	border-radius: 100px;
+	height: 40px;
+	width: 40px;
+	background-color: #000;
+	transition: opacity 0.5s;
+}
+
+.iconbutton:focus{
+	outline: 0;
+	box-shadow: 0 0 2px 2px #55f;
+}
+
+.iconbutton:hover{
+	opacity: 0.7;
+}
+
+#backend_header nav{
+  width: 48%;
+}
+
+#backend_header #access{
+  width: 17%;
+}
+
+#backend_header #access ul{
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 15px;
+}
+
+#backend_header #access ul li:first-child{
+  font-size: 14px;
+}
+
+/* CORPO ************************************************************************************************************************************/
+
+#wrapper{
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+
+#wrapper:after{
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+.content_row{
+  width: calc(100% - 40px);
+  height: 170px;
+  display: flex;
+  margin-top: 40px;
+  padding: 0 20px 0 20px;
+}
+
+.auth_message{
+  width: calc(100% - 100px);
+  padding: 50px;
+}
+
+.auth_message h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.auth_message h2{
+  font-size: 30px;
+}
+
+h4{
+  margin: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+
+.content_box{
+  background-color: #eee;
+  box-shadow: 1px 1px 1px 0 #bbb;
+  width: 100%;
+}
+
+.content_box h1, .tutorials h1{
+  font-family: "Montserrat", sans-serif;
+  height: 30px;
+  width: 200px;
+  background-color: #f9f95c;
+  padding: 5px 0 5px 15px;
+  line-height: 30px;
+  font-size: 22px;
+  border: 2px solid #e7e75a;
+  border-radius: 17px 0 17px 0;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+.content_box p{
+  margin: 0 20px 0 20px;
+}
+
+.content_box ul{
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.content_row img{
+  height: 100%;
+  margin-left: 20px;
+  box-shadow: 1px 1px 1px 0 #bbb;
+}
+
+.content_row:nth-child(odd) img{
+  margin-left: 0;
+  margin-right: 20px;
+  box-shadow: 0px 0px 0px 0px #fff;
+}
+
+.center_box{
+  width: 40%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #eee;
+  box-shadow: 1px 1px 1px 0 #bbb;
+}
+
+.center_box h1{
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.center_box h2{
+  position: relative;
+  top: -27px;
+  left: -14px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #ddd;
+  font-weight: bold;
+}
+
+.center_box h3{
+	width: 100%;
+	padding: 20px 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+.center_box form table{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.center_box form table td{
+  padding: 5px;
+}
+
+.center_box form table tr:last-child td{
+	text-align: center;
+}
+
+.center_box .page_distinction{
+	display: none;
+}
+
+.center_box form table td input, textarea, select{
+  width: 100%;
+}
+
+.center_box form table input[type="checkbox"]{
+	display: inline;
+	width: auto;
+}
+
+.center_box form table th img, .center_box form table td img{
+	vertical-align: middle;
+}
+
+.center_box a:hover{
+	cursor: pointer;
+}
+
+.reset_btn, .submit_btn{
+  padding: 3px 10px 3px 10px;
+  font-family: "Montserrat";
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px #ddd;
+}
+
+.lines{
+	text-align: center;
+}
+
+.reset_btn{
+  background-color: #ff704d;
+  margin-right: 100px;
+}
+
+.submit_btn{
+  background-color: #ddd;
+}
+
+.entries{
+  width: 80%;
+	max-width: 80%;
+  margin: 50px auto;
+  box-shadow: 1px 1px 1px 0 #bbb;
+	text-align: center;
+}
+
+.entries th, .entries td{
+  padding: 4px;
+	word-break: break-word;
+}
+
+.entries th{
+  background-color: #999;
+}
+
+.entries td{
+  background-color: #ccc;
+}
+
+.entries td a{
+  vertical-align: middle;
+}
+
+.entries tr:nth-child(odd) td{
+  background-color: #ddd;
+}
+
+.entries tr:hover td{
+  background-color: #f0f0f0;
+}
+
+.tutorials{
+	padding-top: 50px;
+	width: 100%;
+	max-width: 100%;
+}
+
+.tutorials h2{
+	text-align: center;
+	font-size: 26px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	word-break: break-word;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.tutorials iframe{
+	display: block;
+	margin: 20px auto;
+	width: 500px;
+	height: 345px;
+	position: relative;
+}
+
+.tutorials p{
+	width: 50%;
+	margin: 0 auto 30px;
+	text-align: center;
+	word-break: break-word;
+}
+
+#filter{
+	width: 30%;
+	margin: 0 auto;
+}
+
+#filter h1{
+	width: 100px;
+	margin: 0 auto;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#filter h1:hover{
+	cursor: pointer;
+ }
+
+#filter div{
+	display: none;
+}
+
+#filter table{
+	margin: 0 auto;
+	width: 100%;
+}
+
+#filter table td{
+	padding: 3px;
+}
+
+#filter input{
+	width: 100%;
+}
+
+.rental_wrapper{
+	width: 70%;
+	margin: 20px 15%;
+	border-bottom: 1px #000 solid;
+	padding-bottom: 30px;
+}
+
+.rental_wrapper table{
+	margin: 10px;
+	width: calc(100% - 20px);
+	max-width: calc(100% - 20px);
+}
+
+.rental_wrapper table td {
+	width: 25%;
+	padding-top: 3px;
+}
+
+.rental_wrapper table:not(.entries) td:nth-child(odd){
+	text-align: right;
+	padding-right: 20px;
+}
+
+.rental_wrapper .entries td{
+	width: auto;
+}
+
+#final_report{
+	display: flex;
+	flex-direction: column-reverse;
+	border: none;
+}
+
+.mlt_row{
+	display: none;
+}
+
+.mlt_row td{
+	background-color: #fff !IMPORTANT;
+	text-align: left;
+	padding: 5px 20px;
+}
+
+textarea{
+	resize: none;
+}
+
+.rental_history tr:nth-child(3n+1) td{
+	background-color: #ddd
+}
+
+/* Botão de imprimir cortesia do CodePen : http://codepen.io/hancss/pen/oxpaPV */
+
+button.print-button {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	float: right;
+	top: -72px;
+	right: 20px;
+}
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+	border: solid 4px #333;
+}
+span.print-icon::after {
+	border-width: 2px;
+}
+
+button.print-button {
+	position: relative;
+	padding: 0;
+	border: 0;
+
+	border: none;
+	background: transparent;
+}
+
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+span.print-icon {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin-top: 20%;
+
+	width: 60%;
+	height: 35%;
+	background: #fff;
+	border-radius: 20% 20% 0 0;
+}
+
+span.print-icon::before {
+	content: " ";
+	position: absolute;
+	bottom: 100%;
+	left: 12%;
+	right: 12%;
+	height: 110%;
+
+	transition: height .2s .15s;
+}
+
+span.print-icon::after {
+	content: " ";
+	position: absolute;
+	top: 55%;
+	left: 12%;
+	right: 12%;
+	height: 0%;
+	background: #fff;
+	background-repeat: no-repeat;
+	background-size: 70% 90%;
+	background-position: center;
+	background-image: linear-gradient(
+		to top,
+		#fff 0, #fff 14%,
+		#333 14%, #333 28%,
+		#fff 28%, #fff 42%,
+		#333 42%, #333 56%,
+		#fff 56%, #fff 70%,
+		#333 70%, #333 84%,
+		#fff 84%, #fff 100%
+	);
+
+	transition: height .2s, border-width 0s .2s, width 0s .2s;
+}
+
+button.print-button:hover {
+	cursor: pointer;
+}
+
+button.print-button:hover .print-icon::before {
+	height:0px;
+	transition: height .2s;
+}
+button.print-button:hover .print-icon::after {
+	height:120%;
+	transition: height .2s .15s, border-width 0s .16s;
+}
+
+/* FOOTER ***********************************************************************************************************************************/
+
+footer{
+  width: 100%;
+  height: 60px;
+  padding: 30px 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer ul{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* RESET FIX ********************************************************************************************************************************/
+
+b{
+  font-weight: bold;
+}
